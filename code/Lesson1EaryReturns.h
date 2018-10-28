@@ -4,8 +4,12 @@
 
 template<typename T>
 struct Return {
-    bool isSet;
+    bool isSet = 0;
     T value;
+    void set(T _value){
+        this->value = _value;
+        this->isSet = true;
+    }
 };
 
 int calculate(int n, int j, double name) {
