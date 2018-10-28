@@ -1,20 +1,29 @@
 # EarlyReturnKata
 
-[![Build Status](https://api.travis-ci.org/approvals/EarlyReturnKata.svg?branch=master)](https://travis-ci.org/approvals/EarlyReturnKata)
 
-This is a starter project for:
+Step:
 
-* Catch2
-* CLion (and any other CMake-aware C++ build system)
-* Visual Studio 2017 (`visual-studio-2017\EarlyReturnKata.sln`)
-* ApprovalTests
- 
- Works on Mac, Linux and Windows.
+1. Add return
+'''
+Return<type> r;
+'''
+2. Move value into return
 
- Feel free to copy and go...
+'''
+r.set(value);
+return r.value;
+'''
+3. Add if clause
+'''
+if (r.isSet) {
+    return r.value;
+} else {
 
-Notes:
-
-You will need a Diff tool
-
+}
+'''
+4. move up a level
+ a. if you are in a loop, duplicate outside and add a break;
+5. expand else to everything in left in current block
+6. invert if
+7. repeat
 
