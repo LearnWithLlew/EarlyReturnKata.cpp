@@ -26,8 +26,8 @@ if (r.isSet) {
 }
 ``` 
 
-4. move up a level
- a. if you are in a loop, duplicate outside and add a break;
+4. move up a level  
+  a. if you are in a loop, duplicate outside and add a break;
 5. expand else to everything in left in current block
 6. invert if
 7. repeat
